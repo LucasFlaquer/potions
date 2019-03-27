@@ -5,7 +5,18 @@
 *::after {
 	box-sizing: border-box;
 }
-
-body {
-	background-color: #eee;
+.list-inline {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+	li {
+		display: inline-block;
+	}
+}
+.input {
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 5px 10px 5px 30px;
+  width: 280px;
 }

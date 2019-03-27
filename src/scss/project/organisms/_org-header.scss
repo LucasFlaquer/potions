@@ -1,0 +1,83 @@
+.header {
+	padding: 15px 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: wrap;
+
+	&--logo {
+		img {
+			max-width: 100%;
+		}
+	}
+	.bag {
+		font-size: 1.3rem;
+		text-transform: uppercase;
+		color: $gray;
+		.fa {
+			color: $purple;
+			margin-right: 10px;
+			font-size: 2.4rem;
+			vertical-align: text-top;
+		}
+		span {
+			color: $orange;
+		}
+	}
+	&--search {
+		position: relative;
+		.input {
+			font-size: 1rem;
+		}
+		&:before {
+			content: '\f002';
+			position: absolute;
+			top: 50%;
+			left: 2%;
+			-webkit-transform: translateY(-50%);
+			   -moz-transform: translateY(-50%);
+			    -ms-transform: translateY(-50%);
+			     -o-transform: translateY(-50%);
+			        transform: translateY(-50%);
+	    font: normal normal normal 14px/1 FontAwesome;
+	    // font-size: 1.1rem;
+	    color: $orange;
+		}
+	}
+	&--shipping {
+		max-width: 120px;
+		font-style: italic;
+		color: $orange;
+		font-size: 0.8rem;
+		span {
+			font-size: 1.1rem;
+		}
+	}
+	&--nav {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;	
+		background-color: $purple;
+		padding: 10px 30px;
+		li {
+			a {
+				display: inline-block;
+				padding: 10px 15px;
+				color: $white;
+				&:hover {
+					background-color: $dark-purple;
+					text-decoration: none;
+					border-radius: 10px;
+				}
+			}
+		}
+	}
+	&--login {
+		color: $light-purple;
+		a {
+			color: $white;
+			font-style: italic;
+		}
+	}
+}
