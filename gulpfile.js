@@ -15,7 +15,7 @@ const path = {
 	src: {
 		root: 		"src/",
 		fonts: 		"src/fonts/**/*",
-    samples: 	"src/samples/**/*.{jpg,svg,png,jpeg,JPG,PNG}",
+    samples: 	"src/samples/**/*.{jpg,svg,png,jpeg,JPG,PNG,ico}",
 		scss: 		"src/scss/**/*.{sass,scss}",
     js: 			"src/js/**/*.js",
     templates:  "src/templates/"
