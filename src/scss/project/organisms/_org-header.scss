@@ -5,7 +5,7 @@
 	align-items: flex-start;
 	padding-top: 30px;
 	&--logo {
-
+		margin-bottom: 0;
 	}
 	&--search {
 		position: relative;
@@ -79,6 +79,77 @@
 		span {
 			color:$white;
 			font-style: italic;
+		}
+	}
+	&--mobile {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		padding: 0 15px;
+		position: relative;
+		.header {
+			&--search {
+				position: absolute;
+				top: 0;
+				visibility: hidden;
+			}
+			&--menu {
+				position: absolute;
+				top: 100%;
+				display:block;
+				.list-inline {
+					li {
+						display: block;
+					}
+				}
+			}
+			&--nav {
+				margin-left: 40px;	
+			}
+			&--link {
+				padding:6px;
+				border-bottom: 1px solid $gray;
+			}
+		}
+	}
+	&--logo {
+		margin: 0 10px;
+	}
+	&--hamburger {
+		span {
+			display: block;
+			height: 4px;
+			width: 30px;
+			margin-bottom: 5px;
+			border-radius: 6px;
+			background-color: $purple;
+		}
+	}
+
+}
+@media (max-width: 575px) {
+	.header {
+		display: block;
+		&--bag {
+			flex-direction: column;
+			flex-basis: 20%;
+			p {
+				margin-left: 0;
+			}
+		}
+		&--product {
+			display: block;
+		}
+		&--shipping {
+			display: block;
+			text-align: center;
+			background-color: lighten($gray, 22);
+			padding: 6px;
+			color: darken($gray, 20);
+			color: #777;
+			span {
+				display: inline-block;
+			}
 		}
 	}
 }
