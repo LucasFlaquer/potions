@@ -96,19 +96,34 @@
 			&--menu {
 				position: absolute;
 				top: 100%;
-				display:block;
+				display:none;
+
 				.list-inline {
 					li {
 						display: block;
+						border-bottom: 1px solid $light-purple;
+						padding-left: 40px;
 					}
+				}
+				&.open {
+					display: block;
 				}
 			}
 			&--nav {
-				margin-left: 40px;	
+				// margin-left: 40px;	
 			}
 			&--link {
 				padding:6px;
-				border-bottom: 1px solid $gray;
+				border-bottom: 0px;
+			}
+			&--login {
+				padding: 20px;
+				text-align: center;
+			}
+			&--logo {
+				&.hidden {
+					display: none;
+				}
 			}
 		}
 	}
@@ -116,6 +131,7 @@
 		margin: 0 10px;
 	}
 	&--hamburger {
+		min-width: 30px;
 		span {
 			display: block;
 			height: 4px;
@@ -123,6 +139,38 @@
 			margin-bottom: 5px;
 			border-radius: 6px;
 			background-color: $purple;
+			-webkit-transition: all .25s ease;
+			   -moz-transition: all .25s ease;
+			    -ms-transition: all .25s ease;
+			     -o-transition: all .25s ease;
+			        transition: all .25s ease;
+		}
+		&.open {
+			position: relative;
+
+			span {
+				position: absolute;
+				display: none;
+				&:first-child(),
+				&:last-child() {
+					display: block;
+					
+				}
+				&:first-child {
+					-webkit-transform: rotate(45deg);
+					   -moz-transform: rotate(45deg);
+					    -ms-transform: rotate(45deg);
+					     -o-transform: rotate(45deg);
+					        transform: rotate(45deg);
+				}
+				&:last-child {
+					-webkit-transform: rotate(-45deg);
+					   -moz-transform: rotate(-45deg);
+					    -ms-transform: rotate(-45deg);
+					     -o-transform: rotate(-45deg);
+					        transform: rotate(-45deg);
+				}
+			}
 		}
 	}
 
@@ -132,7 +180,7 @@
 		display: block;
 		&--bag {
 			flex-direction: column;
-			flex-basis: 20%;
+			min-width: 50px;
 			p {
 				margin-left: 0;
 			}
