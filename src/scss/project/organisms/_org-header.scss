@@ -96,7 +96,9 @@
 			&--menu {
 				position: absolute;
 				top: 100%;
-				display:none;
+				display:block;
+				visibility: hidden;
+				animation-duration: .91s;
 
 				.list-inline {
 					li {
@@ -106,7 +108,8 @@
 					}
 				}
 				&.open {
-					display: block;
+					// display: block;
+					visibility: visible;
 				}
 			}
 			&--nav {
@@ -122,7 +125,12 @@
 			}
 			&--logo {
 				&.hidden {
-					display: none;
+					visibility: hidden;
+				}
+			}
+			&--bag {
+				&.hidden {
+					visibility: hidden;
 				}
 			}
 		}
