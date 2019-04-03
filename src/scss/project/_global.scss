@@ -18,10 +18,15 @@
   border: 1px solid #000;
   border-radius: 4px;
   padding: 5px 10px 5px 30px;
-  width: 280px;
+  width: 100%;
 }
 figure {
 	img {
 		max-width: 100%;
+	}
+}
+.section {
+	&--title {
+		
 	}
 }

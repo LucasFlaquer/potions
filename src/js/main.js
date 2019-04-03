@@ -5,23 +5,25 @@ window.onload = function() {
 
 
 function menuMobile() {
-	let i;
-	let menuMobile = document.createElement('div');
-	let hamburger = document.createElement('div');
-	let logo = document.querySelector('.header--logo');
-	let cart = document.querySelector('.header--bag');
-	let search = document.querySelector('.header--search');
-	let nav = document.querySelector('.header--menu');
-	hamburger.innerHTML = "<span></span><span></span><span></span>";
-	menuMobile.classList.add("header--mobile");
-	hamburger.classList.add("header--hamburger");	
+	if (window.innerWidth < 767) {
+		let i;
+		let menuMobile = document.createElement('div');
+		let hamburger = document.createElement('div');
+		let logo = document.querySelector('.header--logo');
+		let cart = document.querySelector('.header--bag');
+		let search = document.querySelector('.header--search');
+		let nav = document.querySelector('.header--menu');
+		hamburger.innerHTML = "<span></span><span></span><span></span>";
+		menuMobile.classList.add("header--mobile");
+		hamburger.classList.add("header--hamburger");	
 
-	menuMobile.appendChild(hamburger);
-	menuMobile.appendChild(logo);
-	menuMobile.appendChild(cart);
-	menuMobile.appendChild(search);
-	menuMobile.appendChild(nav);
-	document.querySelector('.header').prepend(menuMobile);
+		menuMobile.appendChild(hamburger);
+		menuMobile.appendChild(logo);
+		menuMobile.appendChild(cart);
+		menuMobile.appendChild(search);
+		menuMobile.appendChild(nav);
+		document.querySelector('.header').prepend(menuMobile);
+	}
 }
 function toggleMenu() {
 	let menu = document.querySelector('.header--menu');
@@ -50,6 +52,7 @@ function toggleMenu() {
 		// menu.classList.toggle('open');
 		logo.classList.toggle('hidden');
 		bag.classList.toggle('hidden');
+		search.classList.toggle('show');
 	});
 }
 
