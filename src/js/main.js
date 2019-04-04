@@ -1,6 +1,16 @@
 window.onload = function() {
 	menuMobile();
 	toggleMenu();
+	// $.getJSON("./js/data/potions.json", function(json) {
+ //    console.log(json); // this will show the info it in firebug console
+	// });
+	function init() {
+ loadJSON(function(response) {
+  // Parse JSON string into object
+    var actual_JSON = JSON.parse(response);
+    console.log(actual_JSON);
+ });
+}
 }
 
 
@@ -31,7 +41,8 @@ function toggleMenu() {
 	let bag = document.querySelector('.header--bag');
 	let search = document.querySelector('.header--search');
 	// menu.classList.add('animated');
-	document.querySelector('.header--hamburger').addEventListener('click', function() {
+	if(window.innerWidth < 767) {
+		document.querySelector('.header--hamburger').addEventListener('click', function() {
 		this.classList.toggle('open');
 		if (menu.classList.contains('open')) {
 			console.log('fechei');
@@ -53,9 +64,10 @@ function toggleMenu() {
 		logo.classList.toggle('hidden');
 		bag.classList.toggle('hidden');
 		search.classList.toggle('show');
-	});
+	});	
+	}
+	
 }
-
 function animateCSS(element, animationName, callback) {
     // const node = document.querySelector(element)
     element.classList.add('animated', animationName)
@@ -68,4 +80,16 @@ function animateCSS(element, animationName, callback) {
     }
 
     element.addEventListener('animationend', handleAnimationEnd)
+}
+function loadJSON(callback) {   
+	var xobj = new XMLHttpRequest();
+  xobj.overrideMimeType("./js/data/potions.json");
+  xobj.open('GET', 'potions.json', true); // Replace 'my_data' with the path to your file
+  xobj.onreadystatechange = function () {
+  	if (xobj.readyState == 4 && xobj.status == "200") {
+    	// Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+    	callback(xobj.responseText);
+  	}
+	};
+	xobj.send(null);  
 }

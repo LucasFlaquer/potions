@@ -17,7 +17,7 @@ const path = {
 		fonts: 		"src/fonts/**/*",
     samples: 	"src/samples/**/*.{jpg,svg,png,jpeg,JPG,PNG,ico}",
 		scss: 		"src/scss/**/*.{sass,scss}",
-    js: 			"src/js/**/*.js",
+    js: 			"src/js/**/*.{js,json}",
     templates:  "src/templates/"
 	},
 	dist: {
