@@ -24,3 +24,14 @@
 		font-weight: normal;
 	}
 }
+@media (max-width: 575px) {
+	.products {
+		&--grid {
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 5%;
+		}
+		&--title {
+			font-size: 14px;
+		}
+	}
+}
