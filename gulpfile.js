@@ -32,7 +32,7 @@ const path = {
 const bootstrap = path.root + "node_modules/bootstrap/dist/js/bootstrap.js";
 const popper = path.root + "node_modules/popper.js/dist/umd/popper.js";
 const jquery = path.root + "node_modules/jquery/dist/jquery.js";
-// const fontAwesome = path.root + "node_modules/font-awesome/fonts/*";
+const fontAwesome = path.root + "node_modules/font-awesome/fonts/*";
 
 // reload browser starta o browser
 function html() {
@@ -81,7 +81,7 @@ function vendorJs() {
 }
 function fonts(callback) {
   // copy font files
-  // gulp.src(fontAwesome).pipe(gulp.dest(path.dist.fontAwesome));
+  gulp.src(fontAwesome).pipe(gulp.dest(path.dist.fontAwesome));
   gulp.src(path.src.fonts).pipe(gulp.dest(path.dist.fonts))
   /*.pipe(browserSync.reload({stream: true}))*/;
   callback();
