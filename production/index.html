@@ -1,0 +1,106 @@
+<!-- template base para iniciar o desenvolvimento do site -->
+<!-- Já inclui os scripts base do js e do css assim como as meta tags basicas para iniciar -->
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<link rel="shortcut icon" href="/samples/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="css/main.min.css">	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title></head>
+<body>
+	<header class="header">
+		<figure class="header--logo"><img src="samples/logo.png" alt=""></figure>
+		<div class="header--search"><input class="input" type="text" placeholder="Search our stock"></div>
+		<div class="header--product">
+			<p class="header--shipping">
+				Free Shipping <span>on orders over $50</span>
+			</p>
+			<div class="header--bag">
+				<span class="fa fa-magic"></span>
+				<p>Bag: <span class="header--content">1</span></p>
+			</div>
+		</div>
+		<div class="header--menu">
+			<nav class="header--nav">
+				<ul class="list-inline">
+					<li><a href="#" class="header--link">Potions</a></li>
+					<li><a href="#" class="header--link">Ingredients</a></li>
+					<li><a href="#" class="header--link">Books</a></li>
+					<li><a href="#" class="header--link">Supplies</a></li>
+					<li><a href="#" class="header--link">Charms</a></li>
+					<li><a href="#" class="header--link">Clearence</a></li>
+				</ul>
+			</nav>
+			<div class="header--login">
+				<p><span>Sign In</span> or <span>Sign Up</span></p>
+			</div>
+		</div>
+	</header>	<main>
+	<section class="section container products">
+			<h2 class="section--title">Potions</h2>	
+			<div class="products--grid">
+				<a class="products--item" href="#">
+					<figure>
+						<img src="samples/products/aging-potion.png" alt="#">
+					</figure>
+					<h3 class="products--title">Aging Potion - <span class="products--price">$29.99</span></h3>
+				</a>			<a class="products--item" href="#">
+					<figure>
+						<img src="samples/products/aging-potion.png" alt="#">
+					</figure>
+					<h3 class="products--title">Aging Potion - <span class="products--price">$29.99</span></h3>
+				</a>			<a class="products--item" href="#">
+					<figure>
+						<img src="samples/products/aging-potion.png" alt="#">
+					</figure>
+					<h3 class="products--title">Aging Potion - <span class="products--price">$29.99</span></h3>
+				</a>			<a class="products--item" href="#">
+					<figure>
+						<img src="samples/products/aging-potion.png" alt="#">
+					</figure>
+					<h3 class="products--title">Aging Potion - <span class="products--price">$29.99</span></h3>
+				</a>			<a class="products--item" href="#">
+					<figure>
+						<img src="samples/products/aging-potion.png" alt="#">
+					</figure>
+					<h3 class="products--title">Aging Potion - <span class="products--price">$29.99</span></h3>
+				</a>			<a class="products--item" href="#">
+					<figure>
+						<img src="samples/products/aging-potion.png" alt="#">
+					</figure>
+					<h3 class="products--title">Aging Potion - <span class="products--price">$29.99</span></h3>
+				</a>		</div>
+	</section>	</main>
+	<footer class="footer">
+		<div class="footer--about">
+			<ul class="list-inline footer--menu	">
+				<li><a href="#">Company</a></li>
+				<li><a href="#">Contact us</a></li>
+				<li><a href="#">Shipping</a></li>
+				<li><a href="#">Returns</a></li>
+				<li><a href="#">Careers</a></li>
+			</ul>
+			<ul class="list-inline footer--social">
+				<li><a href="#" class="fa fa-facebook"></a></li>
+				<li><a href="#" class="fa fa-twitter"></a></li>
+				<li><a href="#" class="fa fa-tumblr"></a></li>
+				<li><a href="#" class="fa fa-pinterest-p"></a></li>
+				<li><a href="#" class="fa fa-google-plus"></a></li>
+			</ul>
+		</div>
+		<div class="footer--newsletter">
+			<p>Signup for our Newsletter</p>
+			<p>Sign up for our newsletter & get exclusive discounts!</p>
+			<div class="footer--form">
+				<input class="input" type="text" placeholder="Enter yout email">
+				<a href="#">Submit</a>
+			</div>
+		</div>
+		<p class="footer--copyright">
+			&copy; 2015 Merlin's potions. All Rights Reserved
+		</p>
+	</footer>	<script src='js/jquery.js'></script>
+	<script src="js/popper.js"></script>
+	<script src='js/bootstrap.js'></script>
+	<script src="js/main.js"></script></body>
+</html>
