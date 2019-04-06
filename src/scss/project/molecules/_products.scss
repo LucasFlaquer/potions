@@ -6,7 +6,7 @@
 	&--grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 15%;
+		grid-gap: 10px;
 	}
 	&--item {
 		&:hover {

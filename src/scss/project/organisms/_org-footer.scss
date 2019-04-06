@@ -1,0 +1,67 @@
+.footer {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 15px;
+	background-color: lighten($gray, 20%);
+
+	&--about {
+		.footer{
+			&--menu {
+				display: flex;
+				flex-wrap: wrap;
+				margin-bottom: 20px;
+				li {
+					flex-basis: 33%;
+				}
+				a {
+					color: $orange;
+					font-size: 20px;
+				}
+			}
+			&--social {
+				li {
+					margin-right: 30px;
+				}
+				.fa {
+					display: block;
+					background-color: $purple;
+					color: lighten($gray, 20%);
+			    font-size: 24px;
+			    height: 30px;
+			    width: 30px;
+			    vertical-align: middle;
+			    line-height: 32px;
+			    text-align: center;
+			    border-radius: 20px;
+				}
+			}
+		}
+	}
+	&--newsletter {
+		padding: 15px;
+		border-radius: 17px;
+		background-color: $white;
+		p {
+			font-size: 1rem;
+			font-weight: 600;
+			font-style: italic;
+		}
+	}
+	&--form {
+		display: flex;
+		a {
+			padding: 10px 20px;
+			background-color: $orange;
+			color: $white;
+			border-radius: 5px;
+		}
+		.input {
+			margin-right: 10px;
+		}
+	}
+	&--copyright {
+		width: 100%;
+		margin: 0;
+	}
+}
