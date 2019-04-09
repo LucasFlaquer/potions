@@ -1,16 +1,7 @@
 window.onload = function() {
 	menuMobile();
 	toggleMenu();
-	// $.getJSON("./js/data/potions.json", function(json) {
- //    console.log(json); // this will show the info it in firebug console
-	// });
-	function init() {
- loadJSON(function(response) {
-  // Parse JSON string into object
-    var actual_JSON = JSON.parse(response);
-    console.log(actual_JSON);
- });
-}
+	loadPotions();
 }
 
 
@@ -81,15 +72,29 @@ function animateCSS(element, animationName, callback) {
 
     element.addEventListener('animationend', handleAnimationEnd)
 }
-function loadJSON(callback) {   
-	var xobj = new XMLHttpRequest();
-  xobj.overrideMimeType("./js/data/potions.json");
-  xobj.open('GET', 'potions.json', true); // Replace 'my_data' with the path to your file
+function loadJSON(callback) {
+	let xobj = new XMLHttpRequest();
+  xobj.open('GET', '../js/data/potions.json', true);
+  console.log(xobj);
   xobj.onreadystatechange = function () {
-  	if (xobj.readyState == 4 && xobj.status == "200") {
-    	// Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-    	callback(xobj.responseText);
-  	}
-	};
-	xobj.send(null);  
+    if (xobj.readyState == 4 && xobj.status == "200") {
+      callback(xobj.responseText);
+    	}
+  	};
+  xobj.send(null);  
+}
+// loadJSON(function(response) {
+//     var actual_JSON = JSON.parse(response);
+//     console.log(actual_JSON.potions[1]);
+//  });
+function loadPotions() {
+	let grid = document.querySelector('.products--grid');
+	let gridItems = document.querySelectorAll('.products--grid .products--item');
+	let child;
+	console.log(gridItems);
+	gridItems.forEach(function(element, index, array) {
+		console.log(element.children);
+		child = element.children;
+		
+	});
 }
