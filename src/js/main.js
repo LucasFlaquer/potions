@@ -43,34 +43,33 @@ function toggleMenu() {
 				console.log('test');
 			});
 		} else {
-			console.log('abri');
-			// menu.classList.add('open');
-			animateCSS(menu, 'fadeIn', function() {
-				console.log('test');
-			});
-			menu.classList.add('open');
-		}
+				console.log('abri');
+				// menu.classList.add('open');
+				animateCSS(menu, 'fadeIn', function() {
+					console.log('test');
+				});
+				menu.classList.add('open');
+			}
 
-		// menu.classList.toggle('open');
-		logo.classList.toggle('hidden');
-		bag.classList.toggle('hidden');
-		search.classList.toggle('show');
-	});	
+			// menu.classList.toggle('open');
+			logo.classList.toggle('hidden');
+			bag.classList.toggle('hidden');
+			search.classList.toggle('show');
+		});	
 	}
 	
 }
 function animateCSS(element, animationName, callback) {
-    // const node = document.querySelector(element)
-    element.classList.add('animated', animationName)
+  // const node = document.querySelector(element)
+  element.classList.add('animated', animationName)
 
-    function handleAnimationEnd() {
-        element.classList.remove('animated', animationName)
-        element.removeEventListener('animationend', handleAnimationEnd)
-        // console.log('test');
-        if (typeof callback === 'function') callback()
-    }
-
-    element.addEventListener('animationend', handleAnimationEnd)
+  function handleAnimationEnd() {
+      element.classList.remove('animated', animationName)
+      element.removeEventListener('animationend', handleAnimationEnd)
+      // console.log('test');
+      if (typeof callback === 'function') callback()
+  }
+  element.addEventListener('animationend', handleAnimationEnd)
 }
 function loadJSON(callback) {
 	let xobj = new XMLHttpRequest();
